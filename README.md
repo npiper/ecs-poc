@@ -8,7 +8,9 @@ The script creation is done using an AWS environment
 
  * A Group 'ECSAdmins' with the 'AdminstratorAccess' permission
  * The user 'neil' is allocated to this Group
- * An IAM role 'ecsInstanceRole' for Container instances & Services is created
+ * An IAM role 'ecsInstanceRole' for managing Container instances & Services is created
+ * An IAM role 'ecsServiceRole' for Container load balancing, scheduling is created
+
 
 
 ## References
