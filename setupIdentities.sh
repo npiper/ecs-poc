@@ -24,3 +24,9 @@ aws iam create-role --role-name ecsServiceRole --assume-role-policy-document fil
 # 7) Attach the policy 'AmazonEC2ContainerServiceRole' to ecsServiceRole
 aws iam attach-role-policy --role-name ecsServiceRole --policy-arn arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole
 
+# 8) Create a keypair RSA 2048 bit
+ssh-keygen -b 2048 -t rsa -N "" -f ./neil_keypair
+
+# 9) Import the keypair to EC2
+aws ec2 import-key-pair --key-name "neil-ecs" --public-key-material file://neil_keypair.pub
+

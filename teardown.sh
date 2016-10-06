@@ -19,3 +19,6 @@ aws iam detach-group-policy --group-name ECSAdmins --policy-arn arn:aws:iam::aws
 
 # Remove group ECSAdmins
 aws iam delete-group --group-name ECSAdmins
+
+# Delete generated keypair
+rm neil_keypai*
