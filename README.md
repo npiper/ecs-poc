@@ -20,6 +20,8 @@ You need to have a Docker registry account if you wish to create, push your own 
 
 ## References
 
+https://vaneyckt.io/posts/creating_an_ec2_instance_in_a_vpc_with_the_aws_cli/
+
 http://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html#create-an-iam-user
 
 http://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html 
