@@ -15,7 +15,7 @@ You need to have a Docker registry account if you wish to create, push your own 
  * An IAM role 'ecsInstanceRole' for managing Container instances & Services is created
  * An IAM role 'ecsServiceRole' for Container load balancing, scheduling is created
  * A new Policy for ECS based on permissions required from the 'Amazon ECS First Run Wizard' example ( AmazonECSFirstRunPolicy.json )
-
+ * An ECS Container based on ami 'amazon-ecs-optimized' (ami-862211e5)
 
 
 ## References
@@ -23,5 +23,7 @@ You need to have a Docker registry account if you wish to create, push your own 
 http://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html#create-an-iam-user
 
 http://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html 
+
+http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html
 
 http://docs.aws.amazon.com/AmazonECS/latest/developerguide/IAMPolicyExamples.html#first-run-permissions
