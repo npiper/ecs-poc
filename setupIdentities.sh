@@ -30,3 +30,6 @@ ssh-keygen -b 2048 -t rsa -N "" -f ./neil_keypair
 # 9) Import the keypair to EC2
 aws ec2 import-key-pair --key-name "neil-ecs" --public-key-material file://neil_keypair.pub
 
+# Update permissions on keys generated locally
+chmod 600 ./neil_keypair
+chmod 600 ./neil_keypair.pub

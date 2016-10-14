@@ -1,0 +1,1 @@
+instanceId=`aws ec2 run-instances --image-id ami-9eaa1cf6 --count 1 --instance-type t2.micro --key-name my-key --security-group-ids $securityGroupId --subnet-id $subnetId --associate-public-ip-address --query 'Instances[0].InstanceId' --output text`
