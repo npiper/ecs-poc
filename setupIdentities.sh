@@ -18,6 +18,10 @@ aws iam create-role --role-name ecsInstanceRole --assume-role-policy-document fi
 # 5) Attach the policy 'AmazonEC2ContainerServiceforEC2Role' to 'ecsInstanceRole'
 aws iam attach-role-policy --role-name ecsInstanceRole --policy-arn arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role
 
+# 5a) Attach the policy 'AmazonEC2FullAccess` to 'ecsInstanceRole'
+aws iam attach-role-policy --role-name ecsInstanceRole --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
+
+
 # 6) Create the 'ecsServiceRole' for managing container instances / loadbalancing
 aws iam create-role --role-name ecsServiceRole --assume-role-policy-document file://ecsInstanceRole_Policy.json
 
