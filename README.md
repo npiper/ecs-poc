@@ -50,6 +50,11 @@ The above line prints out the public URL, now use this to ssh in as the `ec2-use
 ssh -i ./neil_keypair ec2-user@$instanceURL
 ```
 
+OR to do in one line
+
+```
+ssh -i ./neil_keypair ec2-user@`aws ec2 describe-instances --instance-ids $instanceId --query 'Reservations[0].Instances[0].PublicDnsName' --output text`
+```
 
 ## References
 
